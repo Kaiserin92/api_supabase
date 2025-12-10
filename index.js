@@ -182,10 +182,11 @@ app.delete('/jugadors/antics', async (req, res) => {
 });
 
 
-
+// PORT del servidor: Render assigna la seva variable d’entorn
+const PORT = process.env.PORT || 3000;
 
 
 //INICIAR SERVIDOR
-app.listen(3000, () => {
-  console.log('Servidor escoltant al port 3000')
-})
+app.listen(PORT, () => {
+  console.log(`Servidor escoltant al port ${PORT}`);
+});
